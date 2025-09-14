@@ -1,3 +1,4 @@
+const { default: mongoose } = require('mongoose');
 const User = require('../models/user');
 //get/api/users
 const getallUser = async (req, res, next) => {
@@ -17,8 +18,45 @@ const createUser = async (req, res, next) => {
         console.log(err);
     }
 };
+//put/api/users
+const updateUser = async (req,res,next) => {
+    try {
+        const {id }= req.params;
+        if (!mongoose.isValidObjectId(id)) {
+            return React.status(400).json({ message:"Invalid" });
+        }
+        const updated =  await User.findByIdAndUpdate(id,req.body);
+        if (!updated) return res.status(404).json({ message: "user not found"});
+        return res.status(200).json(updated);
+    }catch (err){
+        next(err);
+    }
+};
+//delete/api/users
+const deleteUser = async (req, res, next) => {
+    try {
+        const { id } = req.params;
+
+        // validate ObjectId
+        if (!mongoose.isValidObjectId(id)) {
+            return res.status(400).json({ message: "Invalid ID" });
+        }
+
+        const deleted = await User.findByIdAndDelete(id);
+
+        if (!deleted) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        return res.status(200).json({ message: "User deleted successfully", deleted });
+    } catch (err) {
+        next(err);
+    }
+};
 
 module.exports = {
     getallUser,
-    createUser
+    createUser,
+    updateUser,
+    deleteUser
 };
