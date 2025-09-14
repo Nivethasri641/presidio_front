@@ -1,14 +1,13 @@
 const express = require('express');
 const Data = require('./calculator.json');
 const connectDB=require('./db_config.js');
-const userRoutes = require('./models/user.js');
-const userController = require('./routers/users.js');
+const userRoutes = require('./routers/users.js');
 
 require('dotenv').config();
 const app= express();
 
 connectDB();
-
+app.use(express.json());
 app.use('/api/users',userRoutes);
 
 app.get('/sample',(req,res)=>{
