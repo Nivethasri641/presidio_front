@@ -54,9 +54,28 @@ const deleteUser = async (req, res, next) => {
     }
 };
 
+//patch/api.users
+const patchUser = async (req, res, next) => {
+    try {
+        const { f_name } = req.params;
+        const patched = await User.findOneAndUpdate(
+            { f_name },{ $set: req.body },{ new: true } );
+
+        if (!patched) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        return res.status(200).json(patched);
+    } catch (err) {
+        next(err);
+    }
+};
+
+
 module.exports = {
     getallUser,
     createUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    patchUser
 };
