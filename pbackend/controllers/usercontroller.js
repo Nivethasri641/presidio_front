@@ -1,12 +1,14 @@
-const User=require('./models/User');
-const getallUser = async(requestAnimationFrame,resizeBy,next) => {
-    try{
+const User = require('../models/user.js');
+
+const getallUser = async (req, res, next) => {
+    try {
         const users = await User.find();
-        resizeBy.json(users);
-    } catch(err){
+        res.json(users);
+    } catch (err) {
         next(err);
     }
 };
+
 module.exports = {
     getallUser
 };
