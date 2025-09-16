@@ -2,6 +2,7 @@ const express = require('express');
 const Data = require('./calculator.json');
 const connectDB=require('./db_config.js');
 const userRoutes = require('./routers/users.js');
+const hotelRoutes = require('./routers/hotel.js');
 
 require('dotenv').config();
 const app= express();
@@ -9,6 +10,10 @@ const app= express();
 connectDB();
 app.use(express.json());
 app.use('/api/users',userRoutes);
+
+connectDB();
+app.use(express.json());
+app.use('/api/hotel',hotelRoutes);
 
 app.get('/sample',(req,res)=>{
     res.send("hello from exp");
