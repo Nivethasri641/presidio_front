@@ -13,7 +13,7 @@ app.use('/api/users',userRoutes);
 
 connectDB();
 app.use(express.json());
-app.use('/api/hotel',hotelRoutes);
+app.use('/api/hotels',hotelRoutes);
 
 app.get('/sample',(req,res)=>{
     res.send("hello from exp");

@@ -4,5 +4,6 @@ const hotelController = require('../controllers/hotelcontroller');
 
 //Routers
 router.get('/',hotelController.getallHotel);
+router.post('/',hotelController.createHotel);
 
 module.exports = router;

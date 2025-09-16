@@ -9,6 +9,17 @@ const getallHotel = async (req, res, next) => {
         console.log(err);
     }
 };
+
+//post/api/hotels
+const createHotel = async (req, res, next) => {
+    try {
+        const mem = await Hotel.create(req.body);
+        res.status(201).json(mem);
+    } catch (err) {
+        console.log(err);
+    }
+};
 module.exports={
-    getallHotel
+    getallHotel,
+    createHotel
 }
