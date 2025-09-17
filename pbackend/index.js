@@ -2,7 +2,7 @@ const express = require('express');
 const Data = require('./calculator.json');
 const connectDB=require('./db_config.js');
 const userRoutes = require('./routers/users.js');
-const hotelRoutes = require('./routers/hotel.js');
+const hotelRoutes = require('./routers/hotels.js');
 
 require('dotenv').config();
 const app= express();
