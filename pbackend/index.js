@@ -4,7 +4,7 @@ const connectDB=require('./db_config.js');
 const userRoutes = require('./routers/users.js');
 const hotelRoutes = require('./routers/hotels.js');
 
-require('dotenv').config();
+require('dotenv').config(); 
 const app= express();
 
 connectDB();
@@ -22,7 +22,7 @@ app.get('/calculator',(req,res) =>{
     res.json(Data);
 });
 const  PORT= process.env.PORT;
-app.listen(PORT, () => console.log(`server running ${PORT}`));
+app.listen(PORT, () => console.log(`server running ${PORT}`)); 
 const fs = require("fs");
 const path = require("path");
 const user = require("./models/user.js");
