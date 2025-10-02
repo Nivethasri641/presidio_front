@@ -1,0 +1,47 @@
+
+/* Navbar background and padding */
+.navbar {
+  background-color: #1e1e2f;   /* dark navy */
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar brand (left side) */
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+  color: #00d4ff !important;  /* aqua blue on hover */
+}
+
+/* Search form */
+.form-control {
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 5px rgba(0, 212, 255, 0.6);
+}
+
+/* Search button */
+.btn-outline-success {
+  border-radius: 25px;
+  padding: 0.5rem 1.2rem;
+  color: #00d4ff;
+  border: 1px solid #00d4ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-success:hover {
+  background-color: #00d4ff;
+  color: #ffffff;
+}

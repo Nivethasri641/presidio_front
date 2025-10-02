@@ -1,0 +1,16 @@
+.filter-section {
+  margin: 20px;
+  text-align: left;
+}
+
+.filter-section label {
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.filter-section select {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

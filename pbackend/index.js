@@ -4,10 +4,13 @@ const connectDB=require('./db_config.js');
 const userRoutes = require('./routers/users.js');
 const hotelRoutes = require('./routers/hotels.js');
 
+
 require('dotenv').config(); 
 const app= express();
 
 connectDB();
+const cors = require('cors')
+app.use(cors());
 app.use(express.json());
 app.use('/api/users',userRoutes);
 
