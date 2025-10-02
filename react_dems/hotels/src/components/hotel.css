@@ -1,33 +1,35 @@
 .hotel-card {
-  border: 1px solid #ccc;
+  border: 1px solid #45A29E;
   border-radius: 8px;
   padding: 16px;
   max-width: 400px;
   margin: 20px auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  background-color: #1F2833;
+  color: #C5C6C7;
   font-family: Arial, sans-serif;
 }
 
 .hotel-card h2 {
-  color: #333;
+  color: #66FCF1;
   margin-bottom: 8px;
 }
 
 .hotel-card p {
-  color: #555;
+  color: #C5C6C7;
   margin: 4px 0;
 }
 
 .hotel-card button {
   padding: 8px 16px;
   border-radius: 4px;
-  background-color: #007bff;
-  color: white;
+  background-color: #66FCF1;
+  color: #0B0C10;
   border: none;
   cursor: pointer;
   margin-top: 10px;
 }
 
 .hotel-card button:hover {
-  background-color: #0056b3;
+  background-color: #45A29E;
 }

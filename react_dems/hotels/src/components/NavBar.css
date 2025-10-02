@@ -1,47 +1,92 @@
+/* NavBar.css */
 
-/* Navbar background and padding */
+/* Reset default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar container */
 .navbar {
-  background-color: #1e1e2f;   /* dark navy */
-  padding: 0.8rem 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, rgb(119, 206, 238) 0%, #EEDDb5 70%, #050851 100%);
+  padding: 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 4px 6px rgba(138, 133, 133, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-/* Navbar brand (left side) */
+/* Navbar brand */
 .navbar-brand {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #ffffff !important;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #4f0594;
 }
 
-.navbar-brand:hover {
-  color: #00d4ff !important;  /* aqua blue on hover */
+/* Form container */
+.navbar .d-flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-/* Search form */
-.form-control {
-  border-radius: 25px;
+/* Input field */
+.navbar .form-control {
   padding: 0.5rem 1rem;
-  border: 1px solid #ccc;
-  transition: all 0.3s ease-in-out;
+  border-radius: 25px;
+  border: 1px solid #66FCF1; /* Vibrant turquoise border */
+  background-color: #261731; /* Slightly lighter dark background */
+  color: #C5C6C7; /* Light grey text */
+  outline: none;
+  transition: all 0.3s ease;
+  width: 200px;
 }
 
-.form-control:focus {
-  border-color: #00d4ff;
-  box-shadow: 0 0 5px rgba(0, 212, 255, 0.6);
+.navbar .form-control::placeholder {
+  color: #66FCF1; /* Turquoise placeholder */
+}
+
+.navbar .form-control:focus {
+  border-color: #66FCF1;
+  box-shadow: 0 0 8px rgba(102, 252, 241, 0.5);
 }
 
 /* Search button */
-.btn-outline-success {
+.navbar .btn {
+  padding: 0.5rem 1rem;
   border-radius: 25px;
-  padding: 0.5rem 1.2rem;
-  color: #00d4ff;
-  border: 1px solid #00d4ff;
-  transition: all 0.3s ease-in-out;
+  border: none;
+  background-color: #66FCF1; /* Vibrant turquoise button */
+  color: #4f0594; /* Dark text for contrast */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.btn-outline-success:hover {
-  background-color: #00d4ff;
-  color: #ffffff;
+.navbar .btn:hover {
+  background-color: #52e8d9; /* Slightly darker turquoise on hover */
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar .d-flex {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar .form-control {
+    width: 150px;
+  }
 }

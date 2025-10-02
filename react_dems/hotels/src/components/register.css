@@ -2,14 +2,15 @@
   max-width: 500px;
   margin: 30px auto;
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 10px;
-  background: #f9f9f9;
+  background: #1F2833;
+  border: 1px solid #45A29E;
 }
 
 .register-container h2 {
   text-align: center;
   margin-bottom: 20px;
+  color: #66FCF1;
 }
 
 .register-form {
@@ -20,20 +21,22 @@
 
 .register-form input {
   padding: 10px;
-  border: 1px solid #aaa;
+  border: 1px solid #45A29E;
   border-radius: 5px;
   font-size: 14px;
+  background-color: #0B0C10;
+  color: #C5C6C7;
 }
 
 .register-form input:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #66FCF1;
 }
 
 .register-form button {
   padding: 10px;
-  background-color: #007bff;
-  color: white;
+  background-color: #66FCF1;
+  color: #0B0C10;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -41,11 +44,12 @@
 }
 
 .register-form button:hover {
-  background-color: #0056b3;
+  background-color: #45A29E;
 }
 
 .register-message {
   margin-top: 10px;
   text-align: center;
   font-weight: bold;
+  color: #C5C6C7;
 }

@@ -1,15 +1,23 @@
-// src/components/Home.js
 import React from "react";
 import Hotel from "./hotel";
 import Filter from "./filters";
-import Register from "./register"
+import Register from "./register";
+import "./home.css";
 
 export default function Home({ hotels }) {
   return (
-    <div>
-      <Hotel hotels={hotels} />
-      <Filter hotels={hotels} />
-      <Register hotels={hotels}/>
+    <div className="home-container">
+      <div className="filter-wrapper">
+        <Filter hotels={hotels} />
+      </div>
+
+      <div className="hotel-wrapper">
+        <Hotel hotels={hotels} />
+      </div>
+
+      <div className="register-wrapper">
+        <Register hotels={hotels} />
+      </div>
     </div>
   );
 }
